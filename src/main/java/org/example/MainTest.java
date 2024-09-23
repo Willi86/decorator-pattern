@@ -5,10 +5,6 @@ public class MainTest {
         // Create some products
         Product milk = new Product("milk", 40, 6);  // 6 units of milk, 40 kronor each
         Product bread = new Product("bread", 30, 2);  // 2 loaves of bread, 30 kronor each
-
-        // Create a chain of discounts: FridayDiscount -> MilkDiscount -> QuantityDiscount
-        Discount discountChain = new FridayDiscount(new MilkDiscount(new QuantityDiscount(null)));
-
         // Apply discounts to the milk product
         System.out.println("Processing product: " + milk.getName());
 
